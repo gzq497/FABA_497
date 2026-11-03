@@ -1,0 +1,4 @@
+# Preserve the source snapshot byte-for-byte, including upstream line endings.
+* -text
+*.sh text eol=lf
+*.jpg binary

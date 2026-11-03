@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "source_files_unchanged": 343,
+  "static": {
+    "status": "static_checks_passed",
+    "python_files_compiled": 294,
+    "unchanged_source_files": 343,
+    "credential_literal_scan": "passed",
+    "private_host_and_key_scan": "passed",
+    "large_file_scan": "passed",
+    "protocol_counts_and_ids": "passed"
+  },
+  "runtime": {
+    "status": "passed",
+    "checks": [
+      {
+        "check": "downstream_forward_backward",
+        "status": "passed"
+      },
+      {
+        "check": "native_federated_training_9_cases",
+        "status": "passed"
+      },
+      {
+        "check": "restore_real_protocol_crisis-mmd",
+        "status": "passed"
+      },
+      {
+        "check": "restore_real_protocol_hateful_memes",
+        "status": "passed"
+      },
+      {
+        "check": "restore_real_protocol_upmc_food101",
+        "status": "passed"
+      },
+      {
+        "check": "cli_features_feature_processing_dual_encoder_features",
+        "status": "passed"
+      },
+      {
+        "check": "cli_attacks_attack_test2_prepare_clip_food101",
+        "status": "passed"
+      },
+      {
+        "check": "clip_faba_training_cli",
+        "status": "passed"
+      }
+    ],
+    "native_downstream_forward_backward_cases": 12,
+    "native_fl_cases": 9,
+    "native_fl_rounds_per_case": 2,
+    "real_protocols_verified": 3,
+    "real_masks_verified": 15,
+    "algorithm_source_modified": false,
+    "fresh_dependency_install_tested": false,
+    "full_formal_experiments_rerun": false,
+    "new_weights_downloaded": false,
+    "model_download_dry_runs_passed": [
+      "mobilenet",
+      "clip",
+      "align"
+    ],
+    "example_shell_syntax": "passed",
+    "example_raw_barrier": "passed"
+  }
+}

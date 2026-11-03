@@ -1,0 +1,25 @@
+def add_post_training_defense_args(parser):
+    group = parser.add_argument_group("server post-training defense")
+    group.add_argument("--server_defense", choices=["none", "par", "tsc"], default="none")
+    group.add_argument("--defense_clean_ratio", type=float, default=0.05)
+    group.add_argument("--defense_clean_seed", type=int, default=2024)
+    group.add_argument("--defense_checkpoint", choices=["best_dev", "last"], default="best_dev")
+
+    group.add_argument("--par_epochs", type=int, default=10)
+    group.add_argument("--par_lr", type=float, default=3e-5)
+    group.add_argument("--par_warmup_start_lr", type=float, default=3e-6)
+    group.add_argument("--par_end_lr", type=float, default=1e-9)
+    group.add_argument("--par_warmup_ratio", type=float, default=0.5)
+    group.add_argument("--par_tau", type=float, default=2.15)
+    group.add_argument("--par_lambda_pert", type=float, default=1.0)
+    group.add_argument("--par_weight_decay", type=float, default=1e-4)
+
+    group.add_argument("--tsc_rounds", type=int, default=3)
+    group.add_argument("--tsc_curve_epochs", type=int, default=200)
+    group.add_argument("--tsc_curve_lr", type=float, default=0.02)
+    group.add_argument("--tsc_curve_t", type=float, default=0.4)
+    group.add_argument("--tsc_eval_interval", type=int, default=20)
+    group.add_argument("--tsc_finetune_epochs", type=int, default=5)
+    group.add_argument("--tsc_finetune_lr", type=float, default=1e-4)
+    group.add_argument("--tsc_equivalence_tol", type=float, default=1e-5)
+    return parser
